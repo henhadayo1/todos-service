@@ -48,6 +48,8 @@ const sendAddNotificationRequest = async (todoId, deadline) => {
       todoId,
       deadline
     );
+
+    // I defined notification service locally to port 4000
     const response = await axios.post(
       process.env.NOTIFICATION_ENDPOINT ||
         "http://localhost:4000/notifications",
